@@ -7,8 +7,9 @@ const findTheOldest = function (personsArr) {
       return +currYear - person["yearOfBirth"];
     }
   });
-  let sortedArr = ageArr.toSorted((a, b) => a - b);
-  let maxAge = sortedArr.reverse()[0];
+  // let sortedArr = ageArr.toSorted((a, b) => a - b);
+  // let maxAge = sortedArr.reverse()[0];
+  let maxAge = ageArr.toSorted((a, b) => a - b).reverse()[0];
   let index = ageArr.indexOf(maxAge);
   return personsArr.at(index);
 };
